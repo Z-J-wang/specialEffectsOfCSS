@@ -1,48 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FlexBox 布局</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        ul {
-            padding: 10px 30px;
-        }
-
-        li {
-            list-style: none;
-            border: 1px solid black;
-        }
-
-        .parentBox {
-            border: solid 1px;
-        }
-
-        .contain {
-            padding: 10px 20px;
-            background-color: cornflowerblue;
-        }
-
-        .box {
-            display: flex;
-        }
-
-        .box li {
-            display: block;
-            min-width: 50px;
-            min-height: 50px;
-        }
-    </style>
-</head>
-
-<body>
+<template>
+  <div class="container">
     <div style="width: 600px;">
         <h2>应用在父容器元素上的CSS属性</h2>
         <div id="flex">
@@ -192,9 +149,8 @@
         <div id="flex-flow">
             <h3>flex-flow 复合属性，设置伸缩盒对象子元素的排列方式</h3>
             <div class="contain">
-                <h4>
-                    <xmp>flex-flow: <‘flex-direction’> || <‘flex-wrap’>
-                    </xmp>
+                <h4 style="text-align: left;">
+                    flex-flow: &lt;‘flex-direction’&gt; || &lt;‘flex-wrap’&gt; 
                 </h4>
                 <p>设置伸缩盒对象的子元素垂直排布超出父容器时是自下而上换行</p>
                 <div class="parentBox">
@@ -466,8 +422,7 @@
             <h3>order 用整数值来定义排列顺序，数值小的排在前面。可以为负值</h3>
             <div class="contain">
                 <h4>
-                    <xmp>order：<number>
-                    </xmp>
+                   order：&lt;number&gt;
                 </h4>
                 <p>设置伸缩盒对象的子元素在父容器中水平方向上逆序显示</p>
                 <div class="parentBox">
@@ -482,12 +437,11 @@
         <div id="flex-grow">
             <h3>flex-grow 设置弹性盒的扩展比率。根据弹性盒子元素所设置的扩展因子作为比率来分配剩余空间。</h3>
             <div class="contain">
-                <h4>
-                    <xmp>flex-grow：<number> (default 0)
-                            <li>1</li>
-                            <li style="flex-grow:1;">2</li>
-                            <li style="flex-grow:3;">3</li>
-                            flexBoxLayout                </xmp>
+                <h4 style=" text-align: left;">
+                    flex-grow：&lt;number&gt; (default 0) <br>
+                            &lt;li&gt;1&lt;/li&gt;<br>
+                            &lt;li style="flex-grow:1;"&gt;2&lt;/li&gt;<br>
+                            &lt;li style="flex-grow:3;"&gt;3&lt;/li&gt;<br>                
                 </h4>
                 <p>
                     不设置“1” 的扩展比例；所以“1”的宽度为默认宽度；“2”和“3”的扩展比例为1：3；也就是说
@@ -505,12 +459,11 @@
         <div id="flex-shrink">
             <h3>flex-shrink 设置弹性盒的收缩比率。根据弹性盒子元素所设置的扩展因子作为比率来分配收缩空间。</h3>
             <div class="contain">
-                <h4>
-                    <xmp>flex-grow：<number> (default 1)
-                            <li style="width: 400px;">1</li>
-                            <li style="width: 400px;">2</li>
-                            <li style="width: 400px; flex-shrink:3;">3</li>
-                    </xmp>
+                <h4 style=" text-align: left;">
+                    flex-grow：&lt;number&gt; (default 1)<br>
+                            &lt;li style="width: 400px;"&gt;1&lt;/li&gt;<br>
+                            &lt;li style="width: 400px;"&gt;2&lt;/li&gt;<br>
+                            &lt;li style="width: 400px; flex-shrink:3;"&gt;3&lt;/li&gt;<br>
                 </h4>
                 <p>
                     不设置“1” “2“收缩比例；“3”的收缩比例为3；
@@ -532,11 +485,10 @@
             <h3>flex-basis 设置弹性盒伸缩基准值</h3>
             <div class="contain">
                 <h4>
-                    <xmp>flex-basis：<length> | auto (default auto)
-                            <li style="width: 400px;">1</li>
-                            <li style="width: 400px;">2</li>
-                            <li style="width: 400px; flex-shrink:3;">3</li>
-                    </xmp>
+                    flex-basis：&lt;length&gt; | auto (default auto)<br>
+                            &lt;li style="width: 400px;"&gt;1&lt;/li&gt;<br>
+                            &lt;li style="width: 400px;"&gt;2&lt;/li&gt;<br>
+                            &lt;li style="width: 400px; flex-shrink:3;"&gt;3&lt;/li&gt;<br>
                 </h4>
                 <p>
                     设置3的伸缩基数为600px
@@ -575,30 +527,6 @@
             </div>
         </div>
     </div>
-    <style>
-        .content {
-        position: fixed;
-        top: 10px;
-        left: 650px;
-        }
-
-        .content ul {
-        padding: 10px;
-        border-radius: 10px;
-        background-color: cadetblue;
-        }
-
-        .content ul li {
-        width: 150px;
-        padding: 5px 5px 5px 15px;
-        cursor: pointer;
-        }
-
-        a {
-        color: #ffffff;
-        text-decoration: none;
-        }
-    </style>
     <div class="content">
         <ul>
             <li title="设定一个flex容器"><a href="#flex">flex | inline-flex</a></li>
@@ -614,6 +542,75 @@
             <li title="设置或检索弹性盒子元素自身在垂直方向上的对齐方式"><a href="#align-self">align-self</a></li>
         </ul>
     </div>
-</body>
+  </div>
+</template>
 
-</html>
+<script>
+export default {
+  name: "",
+  data() {
+    return {
+      msg: "css3弹性和模型",
+    };
+  }
+};
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+  body {
+      margin: 0;
+      padding: 0;
+  }
+
+  ul {
+      padding: 10px 30px;
+  }
+
+  li {
+      list-style: none;
+      border: 1px solid black;
+  }
+
+  .parentBox {
+      border: solid 1px;
+  }
+
+  .contain {
+      padding: 10px 20px;
+      background-color: cornflowerblue;
+  }
+
+  .box {
+      display: flex;
+  }
+
+  .box li {
+      display: block;
+      min-width: 50px;
+      min-height: 50px;
+  }
+
+  .content {
+      position: fixed;
+      top: 100px;
+      left: 650px;
+  }
+
+  .content ul {
+      padding: 10px;
+      border-radius: 10px;
+      background-color: cadetblue;
+  }
+
+  .content ul li {
+      width: 150px;
+      padding: 5px 5px 5px 15px;
+      cursor: pointer;
+  }
+
+  a {
+      color: #ffffff;
+      text-decoration: none;
+  }
+</style>

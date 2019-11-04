@@ -29,6 +29,7 @@ export default {
         {name: 'Bubbles', title: '纯css3鼠标移上去冒泡文字提示框特效'},
         {name: 'ByBike', title: 'css3自行车走动动画场景特效'},
         {name: 'CSS3Var', title: 'CSS3变量与响应式布局实例demo'},
+        {name: 'FlexBoxLayout', title: 'CSS3 弹性盒模型'},
       ]
     }
   },

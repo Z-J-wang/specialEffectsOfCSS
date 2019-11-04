@@ -8,6 +8,7 @@ import Cloud from '@/components/Cloud'
 import Bubbles from '@/components/Bubbles'
 import ByBike from '@/components/ByBike'
 import CSS3Var from '@/components/CSS3-var'
+import FlexBoxLayout from '@/components/FlexBoxLayout'
 
 Vue.use(Router)
 
@@ -45,6 +46,10 @@ export default new Router({
       path: '/CSS3Var',
       name: 'CSS3Var',
       component: CSS3Var,
+    },{
+      path: '/FlexBoxLayout',
+      name: 'FlexBoxLayout',
+      component: FlexBoxLayout,
     }
   ]
 })
