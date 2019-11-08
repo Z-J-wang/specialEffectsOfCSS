@@ -30,6 +30,8 @@ export default {
         {name: 'ByBike', title: 'css3自行车走动动画场景特效'},
         {name: 'CSS3Var', title: 'CSS3变量与响应式布局实例demo'},
         {name: 'FlexBoxLayout', title: 'CSS3 弹性盒模型'},
+        {name: 'Filter', title: 'CSS3 实现滤镜效果'},
+        {name: 'MouseoverTextAndImage', title: 'CSS3 炫酷鼠标悬停图文动画效果'},
       ]
     }
   },
